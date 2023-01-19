@@ -25,10 +25,10 @@ describe('AppController (e2e)', () => {
   });
 
   describe('Photos', () => {
-    it('/api/v1/products (GET) - should return a collection of photos', () => {
+    it('/api/v1/photos (GET) - should return a collection of photos', () => {
       return pactum
         .spec()
-        .get('/api/v1/products')
+        .get('/api/v1/photos')
         .expectStatus(200)
         .expect((ctx) => {
           const photos = ctx.res.json;
